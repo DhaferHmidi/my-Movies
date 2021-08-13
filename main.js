@@ -6,8 +6,7 @@ function verif(){
     var patt2=/[A-Z]/;
     var patt3=/[0-9]/; 
  
-    if(pattsym.test(pass)&&pass.length>=8)
-    { alert("welcom");
+    if(pattsym.test(pass)&&pass.length>=8) { 
         localStorage.setItem(user,pass);
        window.location.assign('file:///C:/Users/Dhafer%20Hmidi/Desktop/movies/my-Movies/index2.html');
     }
@@ -32,7 +31,11 @@ function verifLogIn(){
 var movies = function(mov){
      mov =document.getElementById('movie').value;
     $.get("http://www.omdbapi.com/?apikey=c9dddb65&t="+mov,function(data){
-  $('#par').text(`${data.Title}`)+$("#pic").attr("src",data.Poster)
+  $('#par').text(`${data.Actors}`)+$('#par1').text(`${data.Awards}`)+$('#par2').text(`${data.Genre}`)+$('#par3').text(`${data.imdbRating}`)+$("#pic").attr("src",data.Poster);
     })
 }
 $('#search').click(movies)
+var singout=function(){
+   history.back()
+}
+$('#singout').click(singout)
