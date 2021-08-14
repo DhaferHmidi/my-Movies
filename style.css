@@ -1,5 +1,21 @@
-body {
-    background-image: url("./image/logo.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
+   .cart{
+       height: 50px;
+       width: 25px;
+      
    }
+   #singout{
+       margin-right: 50px;
+   }
+   #try{
+    margin-right: 100px;
+    border: saddlebrown;
+   }
+body{
+    background-color: black;
+}
+#username{
+    color: white;
+}
+.movies{
+    color: white;
+}
